@@ -26,17 +26,14 @@ db_conn = connections.Connection(
 )
 output = {}
 
-@app.route("/", methods=['GET', 'POST'])
-def home():
-    return render_template('index.html')
 
-@app.route("/index", methods=['GET'])
-def display_internship():
+@app.route("/", methods=['GET'])
+def dconn.cursor()
+    cursor.execute(statement)
+    result = cursor.fetchall()isplay_internship():
 
     statement = "SELECT * FROM Internship"
-    cursor = db_conn.cursor()
-    cursor.execute(statement)
-    result = cursor.fetchall()
+    cursor = db_
     cursor.close()
 
     return render_template('index.html', internship = result)    
